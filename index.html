@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title ng-bind="title">Paginations</title>
+</head>
+<body>
+
+    <div ng-controller="firstCtrl as base">
+        <ng-view></ng-view>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/paginations_service.js"></script>
+
+    <!-- Ctrl -->
+    <script src="app/controllers/controllers.js"></script>
+    <script src="app/controllers/paginations.js"></script>
+
+    <script src="app/config/config.route.js"></script>
+
+</body>
+</html>
