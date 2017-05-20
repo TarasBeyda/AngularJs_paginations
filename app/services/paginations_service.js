@@ -13,6 +13,18 @@ app.service("PaginationsService", ["$http", "$q", function ($http, $q) {
                       return $q.reject(errResponse);
                     }
                 )
+        },
+        postPaginations: function (currentPage) {
+            return $http.post("/api/paginations/post", currentPage)
+                .then(
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        console.log("Error while get paginations");
+                        return $q.reject(errResponse);
+                    }
+                )
         }
 
 

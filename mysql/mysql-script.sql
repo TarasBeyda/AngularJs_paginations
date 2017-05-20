@@ -55,3 +55,5 @@ insert into ListForPaginations (title, summary) values
 ("Title 44", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.");
 
 select * from ListForPaginations;
+
+select * from ListForPaginations order by id desc LIMIT 2,10;

@@ -1,0 +1,12 @@
+<a href="/">Start Page</a> <br> <br>
+<h1>AngularJs Paginations</h1>
+
+<table class="table">
+    <!--<tr ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">-->
+    <tr ng-repeat="row in paginations">
+        <td>{{row.id}}</td>
+        <td>{{row.title}}</td>
+    </tr>
+</table>
+
+<ul uib-pagination ng-change="pageChanged();" ng-model="currentPage" items-per-page="itemsPerPage" total-items="totalItems" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></ul>
