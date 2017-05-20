@@ -27,7 +27,7 @@ connectWithMysql.connect(function (err) {
             "Data": ""
         };
 
-        connectWithMysql.query("select * from ListForPaginations order by id limit 1,10", function (err, rows) {
+        connectWithMysql.query("select * from ListForPaginations order by id desc limit 1,10", function (err, rows) {
             if (err) throw err;
             if (rows.length != 0) {
                 data["Data"] = rows;
@@ -40,7 +40,7 @@ connectWithMysql.connect(function (err) {
         })
     });
     app.post("/api/paginations/post", function (req, res) {
-        var currentPage = req.body.currentPage;
+        var currentPage = req.body.currentPage-1;
         var data = {
             "Data": ""
         };
